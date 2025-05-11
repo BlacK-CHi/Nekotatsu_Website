@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--스타일시트 불러오기-->
+        <link rel="stylesheet" href="stylesheet.css"/> <!--사용자 스타일시트-->
+        <link rel="stylesheet" href="styleguide.css"/> <!--스타일 가이드-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> <!--AnimateOnScroll-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> <!--TinyScroll-->
+        
+        <!--자바스크립트 및 라이브러리-->
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script> <!--jQuery-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--AnimateOnScroll-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> <!--TinyScroll-->
+        <script src="script.js"></script> <!--사용자 자바스크립트-->
+
+        <link rel="icon" href="./res/img/icon.png">
+        <title>냥타츠 만화연구소</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <!--오디오 플레이어 (아래쪽에 임베드)-->
+        <audio id="bgmAudio" class="opactiy_obj" loop controls>
+            <source src="./res/audio/2_23_AM.mp3" type="audio/mp3">
+        </audio>
+        
+        <!--퀵 메뉴 (퀵바의 경우에는 table 사용, 우측에 임베드)-->
+        <table id="quickbar" class="opactiy_obj">
+            <tr>
+                <td><a href="#Neko"><img id="quickbar_button" src="./res/img/neko.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#Kota"><img id="quickbar_button" src="./res/img/kota.png"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#Gall"><img id="quickbar_button" src="./res/img/gall.png"></a></td>
+            </tr>   
+        </table>
+        <img id="buttonPgUp" class="opactiy_obj" src="./res/img/arrowUp.png" alt="위로 가기">
+        <img id="buttonPgDn" class="opactiy_obj" src="./res/img/arrowDown.png" alt="아래로 가기">
+
+        
+        <!--타이틀 로고 부분-->
+        <div class="maintitle" id="Title"> 
+            <a id="title_page"></a>
+            <img class="title_img" src="./res/img/titlelogo.png" alt="냥타츠 로고">
+            <a href="#Intro"><img class="down_img"src="./res/img/expand.png" alt="아래로 가기 화살표"></a>
+        </div>
+
+        <!--소개 텍스트 부분-->
+        <firstTex id="Intro">
+            <div class="textbox">
+                <img class="inlineIMG" src="./res/img/title_img.png" alt="" data-aos="fade-down" data-aos-offset="30">
+                <p class="default_text" data-aos="fade-down" data-aos-offset="30">
+                    <span>
+                        까칠한 고양이<span class="nekoYellow"> 냥작가</span>와<br>
+                        따뜻한 드래곤 <span class="kotaYellow">코타츠</span>가 만들어나가는 일상 이야기
+                    </span>
+                </p>
+                <p class="divider_box"data-aos="fade-down" data-aos-offset="50"></p>
+                
+                <p class="default_text" data-aos="fade-down" data-aos-offset="100">
+                    <span>
+                        때로는 <span class="highOrange">특이하지만,</span><br>
+                        때로는 <span class="highOrange">따뜻하고,</span><br>
+                        때로는 <span class="highOrange">소중한</span> 일상 이야기가 여러분을 찾아갑니다.
+                    </span>
+                </p>
+                <p class="divider_box" data-aos="fade-down" data-aos-offset="120"></p>
+                <p class="small_text" data-aos="fade-down" data-aos-offset="120">
+                    <span>
+                        BGM : 2:33AM - しゃろう<br>
+                        Provided by DOVA-SYNDROME
+                    </span>
+                </p>
+            </div>
+        </firstTex>
+
+        <!--냥작가님 프로필-->
+        <nekoProfile id="Neko">
+            <div class="profileBG nekoProf" id="content">
+
+                <div class="imageSection"  data-aos="fade-down" data-aos-offset="100">
+                    <img src="./res/img/nekosan.png" class="profileIMG" alt="">
+                    <div class="tableBox">
+                        <div class="colorChart">
+                            <p class="colorbox neko1"><span class="colortip neko1">FFD47D</span></p>
+                            <p class="colorbox neko2"><span class="colortip neko2">C4A25F</span></p>
+                            <p class="colorbox neko3"><span class="colortip neko3">FFD3EE</span></p>
+                            <p class="colorbox neko4"><span class="colortip neko4">FF7D7D</span></p>
+                            <p class="colorbox neko5"><span class="colortip neko5">A3FF70</span></p>
+                        </div>
+                        <table class="profileTab headerSide">
+                            <tbody>
+                                <tr>
+                                <td class="highOrange headerSide">종족</td>
+                                <td> 고양이</td>
+                                </tr>
+                                <tr>
+                                <td class="highOrange headerSide">좋아하는 것</td>
+                                <td> 따뜻한 것, 참치캔, 츄르</td>
+                                </tr>
+                                <tr>
+                                <td class="highOrange headerSide">싫어하는 것</td>
+                                <td> 추운 날씨, 과제, "냥빨"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="textSection">
+                    <p data-aos="fade-down" data-aos-offset="100">
+                        냥작가<br><span class="small_text">(Neko-San /  ニャンさん)</span>
+                    </p>
+                    <div class="infoBox" data-aos="fade-down" data-aos-offset="50">
+                        <p class="highOrange">".....야옹."</p>      
+                        <p class="textzone" data-aos="fade-down" data-aos-offset="100">
+                            '냥작가' 라는 필명으로 활동하는 대학생 고양이. 학과는 만화창작과.<br>
+                            모아놓은 돈으로 원룸을 구해 작업실 겸 자취방으로 쓰고 있는 사회 초년생.<br>
+                            이름보단 필명으로 더 잘 알려져 있다. 현실에서도 필명이 편한 듯.<br>
+                            자취방에 “따뜻한 변화” 를 줘 보려고 당X마켓에서 ‘코타츠’를 샀다가,<br>
+                            의도치 않게 따뜻하고 커다란 룸메이트가 생겼다.
+                        </p><p class="textzone" data-aos="fade-down" data-aos-offset="150">
+                            표정 변화도, 말도 별로 없어서 차가운 성격이라고 오해하기 쉬우나,<br>
+                            사실은 그 누구보다도 츤데레.<br>
+                            머리 위의 새싹은 무엇이 될지, 냥작가 본인도 모른다고 한다. 가끔 놀랄 때마다 경직되는 걸로 보아 개중에는 바보털이 아닐까 의심하고 있다고.<br>
+                            따뜻한 걸 무지 좋아한다. 추위를 많이 타는 것도 거기에 한몫한다. 실내에서도 항상 매고 있는 붉은 머플러를 벗지 않는다. 머플러가 조금 큰 탓에 항상 입이 가려져 있다.   
+                        </p><p class="textzone" data-aos="fade-down" data-aos-offset="150">
+                            말보다는 거의 야옹거리는 울음소리나, 귀 움직임이나, 꼬리라던가, (거의 바뀌지 않는) 표정이라던가... 그런 방법으로 의사표현을 한다. 말할 수 없는 건 아니지만, 어째서인지 이야기는 그냥 한 마리 고양이처럼 한다. 아, 고양이 맞구나?
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </nekoProfile>
+        
+        <!--코타츠 프로필-->
+        <kotaProfile id="Kota">
+            <div class="profileBG kotaProf">
+
+                <div class="textSection">
+                    <p data-aos="fade-down" data-aos-offset="100">
+                        코타츠<br><span class="small_text">(Kotatsu /  こたつ)</span>
+                    </p>
+                    <div class="infoBox kotaInfo" data-aos="fade-down" data-aos-offset="100">
+                        <p class="kotaYellow">“오늘은 날씨가 춥네요. 꼭 안아줄게요!”</p> 
+                        <p class="textzone" data-aos="fade-down" data-aos-offset="150">
+                            어쩌다가 냥작가님 자취방에 눌러살게 된, 커다랗고 노란 코타츠 드래곤.<br>
+                            왜인지는 모르겠지만 스스로를 당X마켓에 나눔해버리는 기행을 저질렀다 (....)<br>
+                            따뜻함을 나눔하고 싶었다나 뭐라나. 아무튼 지금은 냥작가님 자취방에 얹혀 사는 중.
+                        </p><p class="textzone" data-aos="fade-down" data-aos-offset="200">
+                            따뜻하고 북실북실한 털, 하늘다람쥐의 피막 같은 팔 아래의 이불, 폭신폭신한 뱃살 등... <br>
+                            그 어느 곳 하나도 전부 따뜻하고 폭신폭신하다.<br>
+                            물론 배 속도 포함. 실제 코타츠 안에 들어가는 거랑 대략 같은 느낌이랄까.<br>
+                            냥작가님이 보이지 않는다면 100% 코타츠 속에 들어가서 자고 있는 것.<br><br>
+                            냥작가님과는 반대로 매우 푸근하고 싹싹하고 친절하고.. 아무튼 긍정의 아이콘이다.<br>
+                            냥작가님이 성격이 누그러진 거에는 코타츠의 도움이 좀 있었으려나?
+                        </p><p class="textzone" data-aos="fade-down" data-aos-offset="200">
+                            또 ‘코타츠에 앉아서 귤 까먹기’ 라는, 세간의 인식을 의식하듯이 이마 위에 귤 하나가 있다.<br>
+                            까먹든, 버리든, 쌓아놓든.. 어떻게 해도 무한리필이 되는 매우 신기한 귤.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="imageSection"  data-aos="fade-down" data-aos-offset="100">
+                    <img src="./res/img/kotatsu.png" class="profileIMG">
+                    <div class="tableBox">
+                        <div class="colorChart">
+                            <p class="colorbox kota1"><span class="colortip kota1">FFFBAC</span></p>
+                            <p class="colorbox kota2"><span class="colortip kota2">FFAA7B</span></p>
+                            <p class="colorbox kota3"><span class="colortip kota3">F5C966</span></p>
+                            <p class="colorbox kota4"><span class="colortip kota4">A48653</span></p>
+                            <p class="colorbox kota5"><span class="colortip kota5">A3FF70</span></p>
+                        </div>
+                        <table class="profileTab headerSide">
+                            <tbody>
+                                <tr>
+                                <td class="kotaYellow headerSide">종족</td>
+                                <td> 코타츠 드래곤</td>
+                                </tr>
+                                <tr>
+                                <td class="kotaYellow headerSide">좋아하는 것</td>
+                                <td> 귤, 만화책, 안아주는 것</td>
+                                </tr>
+                                <tr>
+                                <td class="kotaYellow headerSide">싫어하는 것</td>
+                                <td> 세탁 관련이면 뭐든지</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                       
+                </div>
+            </div>
+        </kotaProfile>
+
+        <!--이미지 캐러셀-->
+        <gallery id="Gall">
+            <div class="textbox">
+                <span class="default_text fontsizeXXL" data-aos="fade-down" data-aos-offset="100">그림 모아보기</span>
+                <div class="divider_box_mg" data-aos="fade-down" data-aos-offset="100"></div>
+                <span class="default_text highOrange" data-aos="fade-down" data-aos-offset="100">#냥타츠_만화연구소</span>
+                <span class="small_text" data-aos="fade-down" data-aos-offset="100">그림을 클릭하면 해당 Pixiv 링크로 이동합니다.</span>
+                <div class="slideshow_box" data-aos="fade-down" data-aos-offset="200">
+                    <div class="imgcar">
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/98377015"><img class="carousel_img" src="./res/img/carousel/cafe.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/102366539"><img class="carousel_img" src="./res/img/carousel/halloweem.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/97232520"><img class="carousel_img" src="./res/img/carousel/cloth.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/103046493"><img class="carousel_img" src="./res/img/carousel/gaming.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/105088522"><img class="carousel_img" src="./res/img/carousel/iced.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/96326662"><img class="carousel_img" src="./res/img/carousel/cold.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/101290200"><img class="carousel_img" src="./res/img/carousel/fridge.png"></a>
+                        </div>
+                        <div class="carousel_img">
+                            <a href="https://www.pixiv.net/artworks/105975744"><img class="carousel_img" src="./res/img/carousel/class.png"></a>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </gallery>
+    </body>
+
+    <footer id="footer">
+        <div class="footer_text">Made with ♥<br>(C) kitsu_b0x 2023. All Rights Reserved.<br><br>
+            All of the Photo, Design, Artworks cannot be copied without permission.<br>
+            사이트 내 모든 저작물은 관련법에 의거하여 보호를 받고 있습니다. 무단 전재를 금합니다.</div>
+    </footer>
+</html>

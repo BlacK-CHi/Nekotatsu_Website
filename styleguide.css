@@ -1,0 +1,81 @@
+:root{
+    /* 색상 변수 */
+    --kotaYellow: #ffaa7b;
+    --nekoYellow: #c5a360;
+    --highOrange: #ffab00;
+
+    --neko-1:#ffd47d;
+    --neko-2:#c4a25f;
+    --neko-3:#ffd3ee;
+    --neko-4:#ff7d7d;
+    --neko-5:#a3ff70;
+
+    --kota-1:#fffbac;
+    --kota-2:#ffaa7b;
+    --kota-3:#f5c966;
+    --kota-4:#a48653;
+    --kota-5:#a3ff70;
+
+    /* 텍스트 크기 변수 */
+    --font-s: 16px;
+    --font-m: 20px;
+    --font-l: 24px;
+    --font-xl: 30px;
+    --font-xxl: 36px;
+    --font-xxxl: 48px;
+}
+
+/* 둘기마요고딕 불러오기 (웹폰트) */
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 색상 사전 정의 */
+
+.neko1 {background-color: var(--neko-1);}
+.neko2 {background-color: var(--neko-2);}
+.neko3 {background-color: var(--neko-3);}
+.neko4 {background-color: var(--neko-4);}
+.neko5 {background-color: var(--neko-5);}
+
+.kota1 {background-color: var(--kota-1);}
+.kota2 {background-color: var(--kota-2);}
+.kota3 {background-color: var(--kota-3);}
+.kota4 {background-color: var(--kota-4);}
+.kota5 {background-color: var(--kota-5);}
+
+.nekoYellow {color:var(--nekoYellow);}
+.kotaYellow {color:var(--kotaYellow);}
+.highOrange {color:var(--highOrange)}
+
+.fontsizeXXL {font-size: var(--font-xxxl);}
+.headerSide{
+    text-align: center;
+    padding-right: 15px;
+}
+
+div.nekoProf{
+    background-image: url(./res/img/neko_bg.png);
+    text-align: left;
+    align-items: left;
+}
+
+div.kotaProf{
+    background-image: url(./res/img/kota_bg.png);
+    text-align: right;
+    align-items: right;
+}
+
+div.nekoInfo{
+    text-align: left;
+    align-items: left;
+}
+
+div.kotaInfo{
+    text-align: right;
+    align-items: right;
+}
+

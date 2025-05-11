@@ -1,0 +1,367 @@
+
+/*----------------- 전역 CSS -----------------*/
+
+/* 각 div 및 웹사이트 자체에서 margin으로 인해 흰 공간이 발생하지 않도록 함*/
+html,body{height: 100%; width: auto;}
+body,ul,li,div{margin: 0; padding: 0;}
+
+/* 불러온 글꼴을 div(사이트 전체)에 일괄적으로 적용 */
+html{
+    font-family: "Dovemayo_gothic"; 
+    font-size: 36px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+/* 웹사이트 접속 시 마우스커서가 바뀌도록 수정*/
+html:hover{
+    cursor:url(./res/img/cursor.png), auto;
+}
+
+/*---------------- 타이틀 부분 ------------------*/
+
+.maintitle{
+    /* 배경 이미지 관련 */
+    
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: transparent;
+    background-image: url(./res/img/bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; /* 위치를 고정시켜 패럴랙스 스크롤처럼 구현 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 이미지 위에 마우스를 올려놨을 경우 크기가 작아짐 (hover event) */
+.title_img{
+    width: auto;
+    max-width: 40%;
+    min-width: 300px;
+    margin-bottom: 5%;
+    object-fit: cover;
+    transition: all 0.1s linear; /*이미지가 부드럽게 작아지게 하기 위해 transition 속성을 추가*/
+}
+
+.title_img:hover{
+    transform: scale(0.95);
+}
+
+
+.scroll_text{
+    color: black;
+    opacity: 0.5;
+    font-size: var(--font-xl);
+    text-align: center;
+    width: 690px;
+}
+
+.down_img{
+    transition: all 0.1s linear; /*이미지가 부드럽게 커지게 하기 위해 transition 속성을 추가*/
+}
+
+.down_img:hover{
+    transform: scale(0.8);
+}
+
+/*---------------- 소개문 부분 -----------------*/
+.textbox {
+    width: auto;
+    height: 100%;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 3px 8px gray;
+}
+
+.small_textbox {
+    height: auto;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.default_text{
+    color: black;
+    font-size: var(--font-xxl);
+    height: auto;
+    line-height: 50.4px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    max-width: 690px;
+}
+
+.small_text{
+    color: black;
+    font-size: var(--font-l);
+    height: 107px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    max-width: 690px;
+}
+
+.divider_box {
+    height: 15px; 
+    width: 270px;
+    margin: 0px;
+    background: linear-gradient(90deg, rgb(255, 231, 149) 0%, rgb(255, 207, 151) 100%);
+    background-color: transparent;
+    mix-blend-mode: normal;
+}
+
+.inlineIMG{
+    height: auto;
+    width: auto;
+    max-width: 600px;
+}
+
+/*---------------프로필 부분---------------*/
+
+.profileBG{
+    width: auto;
+    height: 100%;
+    align-items: center;
+    background-color: transparent;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.profileIMG{
+    width: auto;
+    max-width: 400px;
+}
+
+.imageSection{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textSection{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.infoBox {
+    z-index: 0  ;
+    width: auto;
+    min-width: 400px;
+    max-width: 800px;
+    height: fit-content;
+    border-radius: 15px;
+    padding:15px;
+    background-color: white;
+    box-shadow: 0px 10px 10px gray;
+    gap: 20px;
+}
+
+.textzone{
+    font-size:var(--font-m);
+    line-height: 33 .0px;
+}
+
+.profileTab{
+    font-size:var(--font-l);
+    margin: 10px;
+    line-height: 33 .0px;
+}
+
+/*---------------프로필, 색상 표시기---------------*/
+
+.colorChart{
+    height: auto;
+    position: center; 
+    align-items: center;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tableBox{
+    height: fit-content;
+    width: fit-content;
+    position: center; 
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px gray; 
+}
+
+.colorbox {
+    border-radius: 10px;
+    height: 40px;
+    Width: 40px;
+    margin: 5px;
+    background-color: black;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+}
+  
+.colorbox .colortip {
+    visibility: hidden;
+    width: fit-content;
+    text-align: center;
+    font-size: var(--font-l);
+    border-radius: 6px;
+    padding: 5px 5px;
+    
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -100px;
+  }
+  
+.colorbox:hover .colortip {
+    visibility: visible;
+}
+
+/*---------------기능바, 음악 플레이어---------------*/
+#quickbar {
+    position:fixed;
+    top: 50%;
+    right: 20px;
+    transform: translate(0%, -50%); /*50퍼센트 위로 이동시켜 중심을 맞춘다*/
+    
+    border: none;
+    border-radius: 100px;
+    background: var(--kotaYellow);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 0px 3px 8px gray;
+    
+}
+
+#quickbar_button{
+    height: 32px;
+    width: 32px;
+}
+
+#bgmAudio {
+    position:fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#buttonPgUp {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}  
+
+#buttonPgDn  {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.opactiy_obj {
+    opacity: 0.2;
+    transition: all 0.1s linear;
+}
+
+.opactiy_obj:hover {
+    opacity: 1;
+}
+
+/*---------------이미지 캐러셀 관련---------------*/
+.slideshow_box{
+    width: auto;
+    max-width: 1000px;
+    height: math(fit-content + 40px);
+    min-height: 379px;
+    border-radius: 30px;
+    overflow:hidden;
+    align-items: center;
+    background-color: #ffe4d2;
+    justify-content: center;
+    box-shadow: inset 0px 4px 4px gray;
+    display: flex;
+}
+
+.imgcar{
+    margin-bottom: 30px;
+}
+
+.divider_box_mg{
+    height: 15px; 
+    width: 270px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, rgb(255, 231, 149) 0%, rgb(255, 207, 151) 100%);
+    background-color: transparent;
+    mix-blend-mode: normal;
+}
+
+.carousel_img{
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel_img img {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+
+/*---------------바닥글---------------*/
+
+#footer{
+    background: linear-gradient(180deg, rgb(242, 202, 124) 0%, rgb(255, 180, 139) 100%);
+    background-color: transparent;
+    height: 282px;
+    width: auto;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer_text {
+    background-color: transparent;
+    color: white;
+    font-size: var(--font-l);
+    font-style: normal;
+    height: 180px;
+    line-height: 33.6px;
+    text-align: center;
+    width: 1076px;
+}
+/*---------------적응형 레이아웃---------------*/
+
+@media (max-width: 1200px) {
+    /* 700px 이하일 때 적용할 스타일 작성 */
+    .profileBG {
+      flex-direction: column;
+    }
+
+    body{
+        height: auto;
+    }
+}
